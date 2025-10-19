@@ -7,7 +7,6 @@
 ![Node.js](https://img.shields.io/badge/Node.js-22.14.0-339933?logo=node.js)
 ![Express](https://img.shields.io/badge/Express-4.21.2-000000?logo=express)
 
-
 A modern **full-stack** events portal built with **React + React Router (data APIs)** that allows users to **browse, create, edit, and manage events**, subscribe to newsletters, and handle **authentication** via tokens — all wrapped in a **responsive and elegant interface**.
 
 ## 🚀 Features
@@ -24,7 +23,6 @@ A modern **full-stack** events portal built with **React + React Router (data AP
 - 🎨 Reusable UI Components – Modal (with portals), ConfirmModal, Forms, Buttons, and Event Cards.
 - 🌙 Responsive & Modern UI – TailwindCSS styling and consistent design system.
 - 🔔 **Toast Notifications** – Custom-configured react-hot-toast for success/error feedback.
-
 
 ### 🏗️ Backend
 
@@ -45,29 +43,29 @@ A modern **full-stack** events portal built with **React + React Router (data AP
 - **FormData object** for handling the form's event
 - **localStorage** for Login / Logout
 - Implemented routing using React Router (v6+) with:
-    - `createBrowserRouter` + `RouterProvider` with **Route Objects**.
-    - **Nested routes** & **Layouts** with `<Outlet />`
-    - **Index route** (only one per parent)
-    - **Navigation**: `<Link>`, `<NavLink>`, `useNavigate`, `redirect`
-    - **Dynamic routes** (`:id`) + `useParams`
-    - **Query params** with `useSearchParams`
-    - **Data APIs**: `loader` (pre‑render data), `action` (mutations), `useLoaderData`, and `useActionData`
-    - **useNavigation** for pending UI
-    - **<Form>** integrates with actions/URL updates (GET/POST).
-    - **useSubmit** and **useFetcher** (navigation vs no navigation)
-    - **Error handling**: `errorElement`, `throw Response`
-    - **Delay rendering**: `<Suspense>`, Await, and defer
+  - `createBrowserRouter` + `RouterProvider` with **Route Objects**.
+  - **Nested routes** & **Layouts** with `<Outlet />`
+  - **Index route** (only one per parent)
+  - **Navigation**: `<Link>`, `<NavLink>`, `useNavigate`, `redirect`
+  - **Dynamic routes** (`:id`) + `useParams`
+  - **Query params** with `useSearchParams`
+  - **Data APIs**: `loader` (pre‑render data), `action` (mutations), `useLoaderData`, and `useActionData`
+  - **useNavigation** for pending UI
+  - **<Form>** integrates with actions/URL updates (GET/POST).
+  - **useSubmit** and **useFetcher** (navigation vs no navigation)
+  - **Error handling**: `errorElement`, `throw Response`
+  - **Delay rendering**: `<Suspense>`, Await, and defer
 - **React Hot Toast** for UI feedback
 - **JavaScript(ES6+)**
 - **TailwindCSS/Styling**
 - **Vite** (for development and build)
 
 ### 🏗️ Architecture & Patterns
+
 - Clean Separation: Components, pages, loaders, actions, and utilities are well-structured.
 - Custom Utilities:
   - For authentication and auto-logout logic like: `getTokenDuration()`, `getAuthToken()` and others.
   - For resolveing image URLs dynamically by `getImageUrl()`
-
 
 #### ⚡ Deferred Data Loading with defer, Await, and Suspense
 
@@ -79,27 +77,27 @@ Implements **progressive data fetching** using React Router’s **defer**, and `
   export async function eventDetailLoader({ params }) {
     const id = params.eventId;
     return {
-      event: await loadEvent(id),   // fetched immediately
-      events: loadEvents(),         // deferred
+      event: await loadEvent(id), // fetched immediately
+      events: loadEvents(), // deferred
     };
   }
   ```
 
 - Inside the EventDetailPage, the `<Suspense>` and `<Await>` components handle loading states separately for each data source:
 
-    ```javascript
-    <Suspense fallback={Loading event details...}>
-      <Await resolve={event}>
-        {(loadedEvent) => <EventItem event={loadedEvent} />}
-      </Await>
-    </Suspense>
+  ```javascript
+  <Suspense fallback={Loading event details...}>
+    <Await resolve={event}>
+      {(loadedEvent) => <EventItem event={loadedEvent} />}
+    </Await>
+  </Suspense>
 
-    <Suspense fallback={Loading related events...}>
-      <Await resolve={events}>
-        {(loadedEvents) => <EventsList events={loadedEvents} />}
-      </Await>
-    </Suspense>
-    ```
+  <Suspense fallback={Loading related events...}>
+    <Await resolve={events}>
+      {(loadedEvents) => <EventsList events={loadedEvents} />}
+    </Await>
+  </Suspense>
+  ```
 
 ### 🛠️ Backend (Full-stack version)
 
@@ -180,7 +178,9 @@ event-portal/frontend/
 │
 └─
 ```
+
 #### ✨ Highlights
+
 - components/ → Reusable UI and feature-based components (auth, events, modals, etc.)
 - pages/ → Route-based pages structured by domain (auth, events, root-level)
 - lib/ → Centralized actions and loaders for data fetching and mutations (React Router actions/loaders)
@@ -233,6 +233,10 @@ npm start
 <table align="center">
   <tr>
     <td>
+      <h4 align="center">Event Portal Home page</h4>
+      <img src="./frontend/src/assets/screenshots/home.png" alt="Home page" width="300" />
+    </td>
+    <td>
       <h4 align="center">Event Portal Login page</h4>
       <img src="./frontend/src/assets/screenshots/login.png" alt="Login page" width="300"/>
     </td>
@@ -240,22 +244,26 @@ npm start
       <h4 align="center">Event Portal with no events</h4>
       <img src="./frontend/src/assets/screenshots/no-events.png" alt="No events" width="300" />
     </td>
+  </tr>
+  <tr>
     <td>
       <h4 align="center">Event Portal with events list page</h4>
       <img src="./frontend/src/assets/screenshots/events.png" alt="Events list" width="300" />
     </td>
-  </tr>
-  <tr>
+    <td>
+      <h4 align="center">Event Portal with events list on Mobile</h4>
+      <img src="./frontend/src/assets/screenshots/events-mobile.png" alt="Events list on mobile" width="300" />
+    </td>
     <td>
       <h4 align="center">Event Portal with create new event</h4>
-      <img src="./frontend/src/assets/screenshots/add-event.png" alt="Add event" width="400"/>
-    </td>
-    <td>
-      <h4 align="center">Event Portal with event's details</h4>
-      <img src="./frontend/src/assets/screenshots/event-details.png" alt="Event's details" width="400"/>
+      <img src="./frontend/src/assets/screenshots/add-event.png" alt="Add event" width="300"/>
     </td>
   </tr>
   <tr>
+     <td>
+      <h4 align="center">Event Portal with event's details</h4>
+      <img src="./frontend/src/assets/screenshots/event-details.png" alt="Event's details" width="300"/>
+    </td>
     <td>
       <h4 align="center">Event Portal with confirmation delete dialog</h4>
       <img src="./frontend/src/assets/screenshots/confirm-delete-modal.png" alt="Confirm delete modal" width="300"/>

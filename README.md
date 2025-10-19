@@ -14,7 +14,7 @@ A modern **full-stack** events portal built with **React + React Router (data AP
 ### Frontend
 
 - 📅 **Browse Events** – Display events list from a backend API.
-- 🔍 **Event Details** – Load detailed data with defer concept, `Await`, and `Suspense` for optimized rendering.
+- 🔍 **Event Details** – Load detailed data with **defer concept**, `Await`, and `Suspense` for optimized rendering.
 - ✏️ **Create / Edit / Delete Events** – Full CRUD using **React Router action & loader** logic.
 - 🔐 **Authentication System** – Login & signup with token storage in localStorage, automatic logout on token expiration.
 - 💌 Newsletter Subscription – Built with **useFetcher** + **react-hot-toast** for instant UX feedback.
@@ -180,10 +180,12 @@ npm start
 
 ## 🔐 Authentication Flow
 
-- User **sign up** with email and password for the first time.
-- Token stored in localStorage with an expiration timestamp.
-- `getTokenDuration()` computes remaining time → auto-logout when expired.
-- Protected routes (event creation/editing) check `getAuthToken()` before access.
+- User **signs up** with email and password for the first time.
+- On successful authentication, the backend returns a **JWT token**.
+- The token is stored in **localStorage along with an expiration timestamp**.
+- `getTokenDuration()` calculates the remaining time → **auto-logout** when expired.
+- `getAuthToken()` retrieves the token for **protected actions and routes** (like creating or editing events).
+- Routes are conditionally rendered based on token presence — ensuring secure access control.
 
 ---
 
@@ -239,7 +241,6 @@ npm start
 ## 🧩 Future Improvements
 
 - 🔐 Replace access tokens in localStorage (less secure) → to refresh tokens in HttpOnly Refresh Cookies + In-Memory Access Token
-- Categorize events
 - 🧭 Role-based access control (admin vs. user).
 - 🗂️ Event categorization + sorting by date/location
 - 🌍 Multi-language (i18n) support.

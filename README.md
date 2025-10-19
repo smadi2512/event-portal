@@ -21,7 +21,7 @@ A modern **full-stack** events portal built with **React + React Router (data AP
 - ⚡ **Dynamic Routing & Data Fetching** – Fully powered by React Router v6.22+ Data APIs.
 - 🧭 **Protected Routes** – Conditional access based on token presence.
 - 🎨 Reusable UI Components – Modal (with portals), ConfirmModal, Forms, Buttons, and Event Cards.
-- 🌙 Responsive & Modern UI – TailwindCSS styling and consistent design system.
+- 🌙 **Responsive** & Modern UI – **TailwindCSS** styling and consistent design system.
 - 🔔 **Toast Notifications** – Custom-configured react-hot-toast for success/error feedback.
 
 ### 🏗️ Backend
@@ -41,7 +41,7 @@ A modern **full-stack** events portal built with **React + React Router (data AP
 - **React 19.2.0** (hooks: `useState`, `useRef`, `useEffect`)
 - **React Portals** for modal rendering
 - **FormData object** for handling the form's event
-- **localStorage** for Login / Logout
+- **localStorage** for Signup/ Login / Logout
 - Implemented routing using React Router (v6+) with:
   - `createBrowserRouter` + `RouterProvider` with **Route Objects**.
   - **Nested routes** & **Layouts** with `<Outlet />`
@@ -53,8 +53,8 @@ A modern **full-stack** events portal built with **React + React Router (data AP
   - **useNavigation** for pending UI
   - **<Form>** integrates with actions/URL updates (GET/POST).
   - **useSubmit** and **useFetcher** (navigation vs no navigation)
-  - **Error handling**: `errorElement`, `throw Response`
-  - **Delay rendering**: `<Suspense>`, Await, and defer
+  - **Error handling** by using `errorElement`, `throw Response`
+  - **Delay rendering** by using `<Suspense>`, Await, and defer
 - **React Hot Toast** for UI feedback
 - **JavaScript(ES6+)**
 - **TailwindCSS/Styling**
@@ -62,12 +62,12 @@ A modern **full-stack** events portal built with **React + React Router (data AP
 
 ### 🏗️ Architecture & Patterns
 
-- Clean Separation: Components, pages, loaders, actions, and utilities are well-structured.
-- Custom Utilities:
+- **Clean Separation**: Components, pages, loaders, actions, and utilities are well-structured.
+- **Custom Utilities**:
   - For authentication and auto-logout logic like: `getTokenDuration()`, `getAuthToken()` and others.
   - For resolveing image URLs dynamically by `getImageUrl()`
 
-#### ⚡ Deferred Data Loading with defer, Await, and Suspense
+#### ⚡ Deferred Data Loading with defer, Await, and Suspense:
 
 Implements **progressive data fetching** using React Router’s **defer**, and `<Suspense fallback>` + `<Await resolve={promise}>` — providing faster perceived performance and smoother UX.
 
@@ -115,66 +115,24 @@ Implements **progressive data fetching** using React Router’s **defer**, and `
 event-portal/frontend/
 ├─ public/
 │  ├─ images/
-│  │  └─ placeholder-event.png/
+│  │  └─ placeholder-event.png
 │  └─ favicon.svg
 ├─ src/
-│  ├─ assets/
-│  │  └─ screenshots/
-│  │
+│  ├─ assets/screenshots/
 │  ├─ components/
-│  │  ├─ auth/
-│  │  │  ├─ AuthForm.jsx
-│  │  │  └─ LogoutForm.jsx
-│  │  │
-│  │  ├─ events/
-│  │  │  ├─ EventForm.jsx
-│  │  │  ├─ EventItem.jsx
-│  │  │  ├─ EventsList.jsx
-│  │  │  └─ EventsNavigation.jsx
-│  │  │
-│  │  ├─ UI/
-│  │  │  ├─ ConfirmModal.jsx
-│  │  │  └─ Modal.jsx
-│  │  │
-│  │  ├─ MainNavigation.jsx
-│  │  ├─ NewsletterSignup.jsx
-│  │  └─ PageContent.jsx
-│  │
+│  │  ├─ auth/ → AuthForm, LogoutForm
+│  │  ├─ events/ → EventForm, EventItem, EventsList, EventsNavigation
+│  │  ├─ UI/ → Modal, ConfirmModal
+│  │  ├─ MainNavigation, NewsletterSignup, PageContent
 │  ├─ lib/
-│  │  ├─ actions/
-│  │  │  ├─ authActions.js
-│  │  │  ├─ eventActions.js
-│  │  │  └─ newsletterActions.js
-│  │  │
-│  │  └─ loaders/
-│  │     └─ eventLoaders.js
-│  │
+│  │  ├─ actions/ → authActions.js, eventActions.js, newsletterActions.js
+│  │  └─ loaders/ → eventLoaders.js
 │  ├─ pages/
-│  │  ├─ auth/
-│  │  │  └─ Authentication.jsx
-│  │  │
-│  │  ├─ events/
-│  │  │  ├─ EditEvent.jsx
-│  │  │  ├─ EventDetail.jsx
-│  │  │  ├─ Events.jsx
-│  │  │  ├─ EventsRoot.jsx
-│  │  │  └─ NewEvent.jsx
-│  │  │
-│  │  ├─ Error.jsx
-│  │  ├─ Home.jsx
-│  │  ├─ Newsletter.jsx
-│  │  └─ Root.jsx
-│  │
-│  ├─ util/
-│  │  ├─ auth.js
-│  │  ├─ http.js
-│  │  └─ image.js
-│  │
-│  ├─ App.jsx
-│  ├─ router.jsx
-│  ├─ main.jsx
-│  ├─ index.css
-│  └─ structure.txt
+│  │  ├─ auth/ → Authentication.jsx
+│  │  ├─ events/ → EditEvent, EventDetail, Events, EventsRoot, NewEvent
+│  │  ├─ Error, Home, Newsletter, Root
+│  ├─ util/ → auth.js, http.js, image.js
+│  ├─ App.jsx, router.jsx, main.jsx, index.css
 │
 └─
 ```
@@ -222,6 +180,7 @@ npm start
 
 ## 🔐 Authentication Flow
 
+- User **sign up** with email and password for the first time.
 - Token stored in localStorage with an expiration timestamp.
 - `getTokenDuration()` computes remaining time → auto-logout when expired.
 - Protected routes (event creation/editing) check `getAuthToken()` before access.

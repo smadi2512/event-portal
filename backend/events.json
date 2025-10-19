@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "title": "Health & Wellness Expo",
+      "description": "A weekend dedicated to fitness, nutrition, and mindfulness featuring keynote sessions from health professionals",
+      "date": "2025-11-28",
+      "location": "Toronto, Canada",
+      "image": "/events/images/event-1760646666958-36815439.png",
+      "id": "781b83d9-c443-43b7-8810-80f8104fee15"
+    },
+    {
+      "title": "International Food Expo",
+      "description": "Taste, explore, and learn about diverse cuisines from around the world with live cooking shows and tastings.",
+      "date": "2025-11-27",
+      "location": "New York, NY",
+      "image": "/events/images/event-1760646339848-116322473.png",
+      "id": "b5c074a9-2994-4595-8191-df167975f1e8"
+    },
+    {
+      "title": "Modern Art Exhibition",
+      "description": "An inspiring collection of works from emerging and established contemporary artists.",
+      "date": "2025-10-31",
+      "location": "Paris, France",
+      "image": "/events/images/event-1760645353225-364398511.png",
+      "id": "41a7c950-cbb4-458b-a49b-5245c750c26c"
+    },
+    {
+      "title": "Startup Pitch Night",
+      "description": "Watch innovative startups pitch their ideas to a panel of investors and industry experts.",
+      "date": "2025-10-17",
+      "location": "London, UK",
+      "image": "/events/images/event-1760645106041-875528043.png",
+      "id": "f4bf6903-112c-4aaa-a3ae-e64ca3686870"
+    },
+    {
+      "title": "Global Music Festival",
+      "description": "Experience live performances by top international artists and local bands across three stages.",
+      "date": "2025-10-30",
+      "location": "Berlin, Germany",
+      "image": "/events/images/event-1760644306190-881869839.png",
+      "id": "64d5f43a-6d3c-4597-b264-4714a6191670"
+    },
+    {
+      "title": "Tech Innovators Summit 2025",
+      "description": "A premier event bringing together developers, founders, and investors to explore the future of AI, Web3, and automation.",
+      "date": "2025-11-24",
+      "location": "San Francisco, CA",
+      "image": "/events/images/event-1760643849202-292062757.png",
+      "id": "ec1aa94f-6a48-4072-b899-ebd7b5c539d3"
+    }
+  ],
+  "users": [
+    {
+      "email": "test22@gmail.com",
+      "password": "$2a$12$FP2Zw1WeD7VkvjfCTqQDIeE/QZj3exJwexDnruOxlkYDWNf1xGnP2",
+      "id": "74178bec-4da0-4e40-9b42-a254807a2be0"
+    },
+    {
+      "email": "walasmadi93@gmail.com",
+      "password": "$2a$12$/sqiXxGH1ywGoVXZYi2uFOw3Sh/iYCmqD9Wa/ZXODN2dKMnkKbmiK",
+      "id": "84bb6535-affc-4a6f-9088-a96f069a38cc"
+    }
+  ]
+}

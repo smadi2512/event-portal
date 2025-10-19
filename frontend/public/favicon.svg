@@ -1,0 +1,32 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Event Portal - calendar E icon</title>
+
+  <!-- Transparent background by default (no background rect) -->
+
+  <!-- Outer rounded calendar frame (stroke only) -->
+  <rect x="56" y="96" width="400" height="320" rx="48" ry="48" fill="none" stroke="#d4af37" stroke-width="22"></rect>
+
+  <!-- Top binder tabs (filled) -->
+  <rect x="132" y="44" width="44" height="64" rx="14" ry="14" fill="#d4af37"></rect>
+  <rect x="336" y="44" width="44" height="64" rx="14" ry="14" fill="#d4af37"></rect>
+
+  <!-- Inner content area (optional subtle inner border) -->
+  <rect x="96" y="140" width="320" height="232" rx="20" ry="20" fill="none" stroke="#d4af37" stroke-width="6" opacity="0.18"></rect>
+
+  <!-- Letter "E" built from rectangles (solid gold) -->
+  <!-- Vertical stem -->
+  <rect x="150" y="186" width="36" height="160" rx="6" ry="6" fill="#d4af37"></rect>
+  <!-- Top bar -->
+  <rect x="198" y="186" width="136" height="30" rx="6" ry="6" fill="#d4af37"></rect>
+  <!-- Middle bar -->
+  <rect x="198" y="246" width="110" height="30" rx="6" ry="6" fill="#d4af37"></rect>
+  <!-- Bottom bar -->
+  <rect x="198" y="316" width="136" height="30" rx="6" ry="6" fill="#d4af37"></rect>
+
+  <!-- Small sparkle/star to the right of E -->
+  <g transform="translate(362,260) scale(1)">
+    <path d="M0 20 L6 12 L14 6 L6 6 L0 0 L-6 6 L-14 6 L-6 12 Z" fill="#d4af37" transform="translate(-7,-10) scale(0.9)"></path>
+  </g>
+
+</svg>

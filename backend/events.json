@@ -49,16 +49,5 @@
       "id": "ec1aa94f-6a48-4072-b899-ebd7b5c539d3"
     }
   ],
-  "users": [
-    {
-      "email": "test22@gmail.com",
-      "password": "$2a$12$FP2Zw1WeD7VkvjfCTqQDIeE/QZj3exJwexDnruOxlkYDWNf1xGnP2",
-      "id": "74178bec-4da0-4e40-9b42-a254807a2be0"
-    },
-    {
-      "email": "walasmadi93@gmail.com",
-      "password": "$2a$12$/sqiXxGH1ywGoVXZYi2uFOw3Sh/iYCmqD9Wa/ZXODN2dKMnkKbmiK",
-      "id": "84bb6535-affc-4a6f-9088-a96f069a38cc"
-    }
-  ]
+  "users": []
 }

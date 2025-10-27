@@ -1,13 +1,15 @@
-# 📆 Event Portal
+# <img src="./frontend/public/favicon.svg" alt="ReactSphere logo" width="50" align="center"/> Event Portal
 
 ![React](https://img.shields.io/badge/React-19.2.0-61DAFB?logo=react)
+![React Router](https://img.shields.io/badge/React_Router-7.9.4-CA4245?logo=react-router)
 ![Vite](https://img.shields.io/badge/Vite-7.1.9-646CFF?logo=vite)
 ![Tailwind](https://img.shields.io/badge/TailwindCSS-4.1.14-06B6D4?logo=tailwind-css)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript)
 ![Node.js](https://img.shields.io/badge/Node.js-22.14.0-339933?logo=node.js)
 ![Express](https://img.shields.io/badge/Express-4.21.2-000000?logo=express)
 
-A modern **full-stack** events portal built with **React + React Router (data APIs)** that allows users to **browse, create, edit, and manage events**, subscribe to newsletters, and handle **authentication** via tokens — all wrapped in a **responsive and elegant interface**.
+
+A modern **full-stack** events portal built with **React + React Router** that allows users to **browse, create, edit, and manage events**, subscribe to newsletters, and handle **authentication** via tokens — all wrapped in a **responsive and elegant interface**.
 
 ## 🚀 Features
 
@@ -24,7 +26,9 @@ A modern **full-stack** events portal built with **React + React Router (data AP
 - 🌙 **Responsive** & Modern UI – **TailwindCSS** styling and consistent design system.
 - 🔔 **Toast Notifications** – Custom-configured react-hot-toast for success/error feedback.
 
-### 🏗️ Backend
+<br>
+
+### Backend
 
 - ⚙️ Implemented with **Node.js + Express** (used as a ready backend source)
 - 🔌 Uses a prebuilt REST API for fetching and managing events
@@ -59,6 +63,8 @@ A modern **full-stack** events portal built with **React + React Router (data AP
 - **JavaScript(ES6+)**
 - **TailwindCSS/Styling**
 - **Vite** (for development and build)
+
+<br>
 
 ### 🏗️ Architecture & Patterns
 
@@ -99,7 +105,9 @@ Implements **progressive data fetching** using React Router’s **defer**, and `
   </Suspense>
   ```
 
-### 🛠️ Backend (Full-stack version)
+<br>
+
+### 🛠️ Backend
 
 - Node.js
 - Express.js for creating REST API endpoints
@@ -163,6 +171,8 @@ npm run dev
 ```
 
 **Note**: The frontend will run on http://localhost:5173
+
+<br>
 
 ### Running Backend
 

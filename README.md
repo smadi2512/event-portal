@@ -15,13 +15,14 @@ A modern **full-stack** events portal built with **React + React Router** that a
 ### Frontend
 
 - **Event Management** – Create, edit, delete, and view events using **React Router’s loaders & actions**
-- **Data Loading** – Faster optimized page rendering using `defer`, `Await`, and `Suspense`.
-- **Authentication** – Token-based login and signup with automatic logout when the token expires
+- **Data Loading** – Faster page rendering using `defer`, `Await`, and `Suspense`.
+- **Authentication** – **Token-based** login and signup with automatic logout when the token expires
 - **Newsletter** – Quick newsletter subscription using `useFetcher` with instant toast feedback.
 - **Routing** – Nested layouts, URL parameters, and smooth navigation with **React Router**
-- **Protected Routes** – Access control based on the user’s authentication state
+- **Protected Routes** – Access control based on the **user’s authentication state**
 - **Reusable Components** – Shared UI elements like modals, confirmation dialogs, and event cards.
 - **Modern Styling** – TailwindCSS with a consistent, mobile-first design
+- **Toast Notifications** – Custom-configured **react-hot-toast** for success/error feedback.
 
 <br>
 
@@ -65,7 +66,7 @@ A modern **full-stack** events portal built with **React + React Router** that a
 ### 🏗️ Architecture & Patterns
 
 - **Clean Separation**: Components, pages, loaders, actions, and utilities are well-structured.
-- **Custom Utilities**: Helpers for **authentication** (like `getTokenDuration()`, `getAuthToken()` and others) and resolving image URLs dynamically by `getImageUrl()`.
+- **Custom Utilities**: Helpers for **authentication** (like `getTokenDuration()`, `getAuthToken()` and others) and **resolving image URLs** dynamically by `getImageUrl()`.
 
 <br>
 

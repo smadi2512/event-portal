@@ -2,39 +2,35 @@
 
 ![React](https://img.shields.io/badge/React-19.2.0-61DAFB?logo=react)
 ![React Router](https://img.shields.io/badge/React_Router-7.9.4-CA4245?logo=react-router)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript)
 ![Vite](https://img.shields.io/badge/Vite-7.1.9-646CFF?logo=vite)
 ![Tailwind](https://img.shields.io/badge/TailwindCSS-4.1.14-06B6D4?logo=tailwind-css)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript)
 ![Node.js](https://img.shields.io/badge/Node.js-22.14.0-339933?logo=node.js)
 ![Express](https://img.shields.io/badge/Express-4.21.2-000000?logo=express)
 
-
-A modern **full-stack** events portal built with **React + React Router** that allows users to **browse, create, edit, and manage events**, subscribe to newsletters, and handle **authentication** via tokens — all wrapped in a **responsive and elegant interface**.
+A modern **full-stack** events portal built with **React + React Router** that allows users to **browse, create, edit, and manage events**, subscribe to newsletters, and handle **authentication via tokens** — all wrapped in a **responsive and elegant interface**
 
 ## 🚀 Features
 
 ### Frontend
 
-- 📅 **Browse Events** – Display events list from a backend API.
-- 🔍 **Event Details** – Load detailed data with **defer concept**, `Await`, and `Suspense` for optimized rendering.
-- ✏️ **Create / Edit / Delete Events** – Full CRUD using **React Router action & loader** logic.
-- 🔐 **Authentication System** – Login & signup with token storage in localStorage, automatic logout on token expiration.
-- 💌 Newsletter Subscription – Built with **useFetcher** + **react-hot-toast** for instant UX feedback.
-- ⚡ **Dynamic Routing & Data Fetching** – Fully powered by React Router v6.22+ Data APIs.
-- 🧭 **Protected Routes** – Conditional access based on token presence.
-- 🎨 Reusable UI Components – Modal (with portals), ConfirmModal, Forms, Buttons, and Event Cards.
-- 🌙 **Responsive** & Modern UI – **TailwindCSS** styling and consistent design system.
-- 🔔 **Toast Notifications** – Custom-configured react-hot-toast for success/error feedback.
+- **Event Management** – Create, edit, delete, and view events using **React Router’s loaders & actions**
+- **Data Loading** – Faster optimized page rendering using `defer`, `Await`, and `Suspense`.
+- **Authentication** – Token-based login and signup with automatic logout when the token expires
+- **Newsletter** – Quick newsletter subscription using `useFetcher` with instant toast feedback.
+- **Routing** – Nested layouts, URL parameters, and smooth navigation with **React Router**
+- **Protected Routes** – Access control based on the user’s authentication state
+- **Reusable Components** – Shared UI elements like modals, confirmation dialogs, and event cards.
+- **Modern Styling** – TailwindCSS with a consistent, mobile-first design
 
 <br>
 
 ### Backend
 
-- ⚙️ Implemented with **Node.js + Express** (used as a ready backend source)
-- 🔌 Uses a prebuilt REST API for fetching and managing events
-- 📂 JSON file storage (easy to replace with DB)
-- 🌐 Endpoints for retrieving, creating, updating, and deleting events
-- 🔁 Ready to extend with DB, or cloud deployment
+- **Node.js + Express** – Prebuilt REST API for event management.
+- **JSON File Storage** – Lightweight, and easy to replace with a real database.
+- **Full CRUD Endpoints** – Fetching, creating, updating, and deleting events
+- **Extensible** – Can be replaced or extended with a real database or a cloud backend
 
 ---
 
@@ -64,20 +60,20 @@ A modern **full-stack** events portal built with **React + React Router** that a
 - **TailwindCSS/Styling**
 - **Vite** (for development and build)
 
-<br>
+---
 
 ### 🏗️ Architecture & Patterns
 
 - **Clean Separation**: Components, pages, loaders, actions, and utilities are well-structured.
-- **Custom Utilities**:
-  - For authentication and auto-logout logic like: `getTokenDuration()`, `getAuthToken()` and others.
-  - For resolveing image URLs dynamically by `getImageUrl()`
+- **Custom Utilities**: Helpers for **authentication** (like `getTokenDuration()`, `getAuthToken()` and others) and resolving image URLs dynamically by `getImageUrl()`.
 
-#### ⚡ Deferred Data Loading with defer, Await, and Suspense:
+<br>
 
-Implements **progressive data fetching** using React Router’s **defer**, and `<Suspense fallback>` + `<Await resolve={promise}>` — providing faster perceived performance and smoother UX.
+#### ⚡Deferred Data Loading:
 
-- The eventDetailLoader returns a deferred object combining a single event (awaited immediately) and a list of events (loaded in the background):
+Implements **progressive data fetching** using React Router’s **defer**, and `<Suspense fallback>` + `<Await resolve={promise}>` to provide faster perceived performance and smoother UX.
+
+- The loader (eventDetailLoader) fetches the selected event immediately and loads the events list in the background:
 
   ```javascript
   export async function eventDetailLoader({ params }) {
@@ -105,7 +101,7 @@ Implements **progressive data fetching** using React Router’s **defer**, and `
   </Suspense>
   ```
 
-<br>
+---
 
 ### 🛠️ Backend
 
@@ -152,7 +148,7 @@ event-portal/frontend/
 - lib/ → Centralized actions and loaders for data fetching and mutations (React Router actions/loaders)
 - util/ → Shared helper functions (HTTP logic, image utilities, auth helpers)
 - assets/ → screenshots
-- router.jsx → Centralized route definitions with createBrowserRouter
+- router.jsx → Centralized route definitions with `createBrowserRouter`
 
 ---
 
@@ -250,22 +246,22 @@ npm start
 
 ## 🧩 Future Improvements
 
-- 🔐 Replace access tokens in localStorage (less secure) → to refresh tokens in HttpOnly Refresh Cookies + In-Memory Access Token
-- 🧭 Role-based access control (admin vs. user).
-- 🗂️ Event categorization + sorting by date/location
-- 🌍 Multi-language (i18n) support.
-- 🧪 Add Jest + React Testing Library for testing.
-- ✨ Improve animations (Framer Motion).
+- Enhanced token security with **HttpOnly cookies + in-memory access tokens**
+- Role-based access control (admin vs. user).
+- Event categorization + sorting by date/location
+- Multi-language (i18n) support.
+- Add Jest + React Testing Library for testing.
+- Smooth animations with Framer Motion
 
 ---
 
 ## 👩‍💻 Author
 
-Created by **Walaa Smadi**✨ \
+Created by **Walaa Smadi** ✨ \
 Passionate React developer building modern, maintainable, scalable, performant, and user-friendly web apps.
 
-- 📧 Email: [walasmadi93@gmail.com](mailto:walasmadi93@gmail.com)
-- 💼 LinkedIn: [Walaa Smadi](https://www.linkedin.com/in/walaa-bilal-smadi/)
-- 🐙 GitHub: [@smadi2512](https://github.com/smadi2512)
+- Email: [walasmadi93@gmail.com](mailto:walasmadi93@gmail.com)
+- LinkedIn: [Walaa Smadi](https://www.linkedin.com/in/walaa-bilal-smadi/)
+- GitHub: [@smadi2512](https://github.com/smadi2512)
 
 Feel free to fork, star ⭐, and contribute!
